@@ -4,11 +4,10 @@ const inquirer = require(`inquirer`);
 // Import module created to generate the README template
 const generateReadme = require(`./generateMarkdown`);
 
-// Write the README.md
-fs.writeFile('README.md', generateReadme)
 
-// Array of questions for user input into the README.md (lesson 19)
-const questions = [
+// Array of questions for user input into the README.md
+inquirer
+.prompt ([
     {
         name: `Title`,
         type: `input`,
@@ -55,7 +54,11 @@ const questions = [
     
     },
  
-  ]
+  ])
+
+// Write the README.md
+fs.writeFile('README.md', generateReadme, questions);
+
 
 
 //Appends the answers to the questions to the README.md file
