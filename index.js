@@ -1,9 +1,8 @@
 // Packages needed for this application
-const fs = require(`fs`);
-const inquirer = require(`inquirer`);
+const fs = require('fs');
+const inquirer = require('inquirer');
 // Import module created to generate the README template
-const generateReadme = require(`./generateMarkdown`);
-
+const generateReadme = require('./generateMarkdown');
 
 // Array of questions for user input into the README.md
 inquirer
@@ -56,15 +55,11 @@ inquirer
  
   ])
 
-// Write the README.md
-fs.writeFile('README.md', generateReadme, questions);
+ 
+// // Write the README.md
+questions.then((prompt.answer),=>
+fs.writeFile('README.md', generateReadme, answers);
 
-
-
-//Appends the answers to the questions to the README.md file
-// questions.then((prompt.answer),=>
-// console.log(answer);
-// fs.appendFile('README.md));
 
 
 // // TODO: Create a function to initialize app
