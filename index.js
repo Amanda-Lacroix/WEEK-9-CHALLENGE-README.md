@@ -4,9 +4,6 @@ const inquirer = require('inquirer');
 // Import module created in generateMarkdown.js project to generate the README template
 const generateReadme = require('./generateMarkdown');
 
-// Create the README.md 
-fs.writeFile('README.md', generateReadme, data);
-
 // Array of questions for user input into the README.md
 inquirer
 .prompt ([
@@ -58,10 +55,12 @@ inquirer
  
   ])
 
- 
+  console.log (generateReadme)
+
+
 // // Write the answers to the README.md
-prompt,(answers)=> {
-fs.appendFile('README.md', generateReadme.generateMarkdown, answers)};
+// .then(answers)=> {
+// fs.appendFile('README.md', generateReadme.generateMarkdown, answers)};
 
 
 
