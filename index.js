@@ -5,11 +5,6 @@ const inquirer = require('inquirer');
 // Import module created in generateMarkdown.js project to generate the README template
 const generateReadme = require('./generateMarkdown');
 
-// fs.readFile('generateReadme.js', function (_err, data){
-   
-// });
-
-
 // Array of questions for user input into the README.md
 inquirer
 .prompt ([
@@ -62,15 +57,21 @@ inquirer
   ])
 
 
+.then((answers) => {
+ const readMe = generateReadme (answers)
+    // // Write the answers to the README.md
+    fs.writeFile('README.md', readMe, (err) =>{
+    if (err) {
+    
+        console.log ("There's been an error");
+    } 
+    else{
+        console.log('README.md created!');
+    }
+  
+  });
 
-// .then((answers) => {
-// generateReadme(answers);
-//      // // Write the answers to the README.md
-//     fs.writeFile('README.md', generateReadme, (err) =>
-//     err ? console.log(err) : console.log('Successfully created index.html!')
-//     );
-//   });
-
+});
 
 // // TODO: Create a function to initialize app
 // function init() {}

@@ -1,29 +1,28 @@
 // TODO: Create a function to generate markdown for README
 function generateReadme(answers){
-  return "test"
-//   return `
+  return `
 
-//   # ${answers.Title}
+  # ${answers.Title}
 
-//   ## Table of Contents
+  ## Table of Contents
 
     
-//   ## Description
-//   ${answers.Description}
+  ## Description
+  ${answers.Description}
 
-//   ## Installation
-//   ${answers.Installation}
+  ## Installation
+  ${answers.Installation}
 
-//   ## Usage
-//   ${answers.Usage}
+  ## Usage
+  ${answers.Usage}
 
-//   ## Contribution
-//   ${answers.Contribution}
+  ## Contribution
+  ${answers.Contribution}
 
-//   ## Tests
-//   ${answers.Tests}
+  ## Tests
+  ${answers.Tests}
 
-// `;
+`;
 
 }
 
