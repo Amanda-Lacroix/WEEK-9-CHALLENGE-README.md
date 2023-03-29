@@ -1,34 +1,30 @@
-const fs = require('fs');
 // TODO: Create a function to generate markdown for README
 function generateReadme(answers){
-  return `
+  return "test"
+//   return `
 
-  # ${answers.Title}
+//   # ${answers.Title}
 
-  ## Table of Contents
+//   ## Table of Contents
 
     
-  ## Description
-  ${answers.Description}
+//   ## Description
+//   ${answers.Description}
 
-  ## Installation
-  ${answers.Installation}
+//   ## Installation
+//   ${answers.Installation}
 
-  ## Usage
-  ${answers.Usage}
+//   ## Usage
+//   ${answers.Usage}
 
-  ## Contribution
-  ${answers.Contribution}
+//   ## Contribution
+//   ${answers.Contribution}
 
-  ## Tests
-  ${answers.Tests}
+//   ## Tests
+//   ${answers.Tests}
 
-`;
-
+// `;
 
 }
-fs.writeFile('readme.md', generateReadme, err);
-
-console.log (generateReadme)
 
 module.exports= generateReadme;
