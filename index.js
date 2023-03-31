@@ -9,43 +9,43 @@ const generateReadme = require('./generateMarkdown');
 inquirer
 .prompt ([
     {
-        name: `Title`,
+        name: `title`,
         type: `input`,
         message: "What is the title of your project?"
     
     },
 
     {
-        name: `Description`,
+        name: `description`,
         type: `input`,
         message: "Provide details of the project?"
     
     },
     {
-        name: `Installation`,
+        name: `installation`,
         type: `input`,
         message: "How do you install this application?"
     
     },
     {
-        name: `Usage`,
+        name: `usage`,
         type: `input`,
         message: "What is this application used for?"
     
     },
     {
-        name: `Contibution`,
+        name: `contribution`,
         type: `checkbox`,
         message: "Please click all that apply:",
-        choices: ['https://github.com/SBoudrias/Inquirer.js', 'Starter code provided by: https://git.bootcampcontent.com/new-brunswick/UNB-VIRT-FSF-PT-01-2023-U-LOLC/','https://gist.github.com/ulises-jeremias/ebcacbc50c64d4e04bc8b161e2fa44a9'],
-          
+        choices: ['https://github.com/SBoudrias/Inquirer.js', 'Starter code provided by: https://git.bootcampcontent.com/new-brunswick/UNB-VIRT-FSF-PT-01-2023-U-LOLC/', 'https://gist.github.com/ulises-jeremias/ebcacbc50c64d4e04bc8b161e2fa44a9'],
+         
     },
     {
-        name: `License`,
+        name: `license`,
         type: `list`,
         message: "Choose your license:",
         choices: [`Apache`,`Eclipse`,`GNU`,`MIT`],
-       
+
     },
 
   ])

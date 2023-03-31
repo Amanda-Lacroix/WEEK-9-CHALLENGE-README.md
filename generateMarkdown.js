@@ -1,5 +1,5 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// // TODO: Create a function that returns a license badge based on which license is passed in
+// // If there is no license, return an empty string
 function renderLicenseBadge(license) {
  switch(choices) {
     case'Apache':
@@ -14,20 +14,20 @@ function renderLicenseBadge(license) {
     case 'MIT':
         return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]";
 
-    default:
+    default: ''
  }
 
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// // TODO: Create a function that returns the license link
+// // If there is no license, return an empty string
 function renderLicenseLink(license) {
     switch(choices) {
        case'Apache':
-           return "[![License](https://opensource.org/licenses/Apache-2.0)]";
+           return "[![License: Apache](https://opensource.org/licenses/Apache-2.0)]";
    
        case 'Eclipse':
-           return "[![License](https://opensource.org/licenses/EPL-1.0)]";
+           return "[![License: Eclipse](https://opensource.org/licenses/EPL-1.0)]";
    
        case 'GNU':
            return "[![License: GPL v3](http://www.gnu.org/licenses/gpl-3.0)]";
@@ -35,7 +35,7 @@ function renderLicenseLink(license) {
        case 'MIT':
            return "[![License: MIT](https://opensource.org/licenses/MIT)]";
    
-       default:
+       default: ''
     }
 }
 
@@ -47,25 +47,34 @@ function renderLicenseLink(license) {
 function generateReadme(answers){
   return `
 
-  # ${answers.Title}
+  # ${answers.title}
+
+  ${renderLicenseBadge.answers}
 
   ## Table of Contents
 
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contribution](#contribution)
+  - [License](#license)
+
     
   ## Description
-  ${answers.Description}
+  ${answers.description}
 
   ## Installation
-  ${answers.Installation}
+  ${answers.installation}
 
   ## Usage
-  ${answers.Usage}
+  ${answers.usage}
 
   ## Contribution
-  ${answers.Contribution}
+  ${answers.contribution}
 
   ## License
-  ${answers.License}
+  ${answers.license}
+  ${renderLicenseLink.answers}
 
 `;
 
