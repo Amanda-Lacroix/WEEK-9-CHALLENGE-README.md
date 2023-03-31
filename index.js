@@ -44,21 +44,8 @@ inquirer
         name: `License`,
         type: `list`,
         message: "Choose your license:",
-        choices: [`Apache`,`Eclipse`,`GNU`,`MIT`]
-            // switch () {
-            //         case 'Apache':
-            //             return += ("[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)");
-            //             break;
-            //         case 'Eclipse':
-            //             return += ("[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)");
-            //             break;
-            //         case 'GNU':
-            //             return += ("[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)");
-            //             break;
-            //         case 'MIT':
-            //             return += ("[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)");
-            //             break;
-            //         default:
+        choices: [`Apache`,`Eclipse`,`GNU`,`MIT`],
+       
     },
 
   ])
@@ -77,6 +64,7 @@ inquirer
     }
   
   });
+
 
 
 });
