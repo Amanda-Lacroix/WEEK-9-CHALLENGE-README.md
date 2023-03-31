@@ -34,7 +34,19 @@ inquirer
     
     },
     {
-        name: `contribution`,
+        name: `questions`,
+        type: `input`,
+        message: "Github Username:"
+    
+    },
+    {
+        name: `questionsTwo`,
+        type: `input`,
+        message: "Email address:"
+    
+    },
+    {
+        name: `credits`,
         type: `checkbox`,
         message: "Please click all that apply:",
         choices: ['https://github.com/SBoudrias/Inquirer.js', 'Starter code provided by: https://git.bootcampcontent.com/new-brunswick/UNB-VIRT-FSF-PT-01-2023-U-LOLC/', 'https://gist.github.com/ulises-jeremias/ebcacbc50c64d4e04bc8b161e2fa44a9'],
@@ -43,7 +55,7 @@ inquirer
     {
         name: `license`,
         type: `list`,
-        message: "Choose your license:",
+        message: "The application is covered under license:",
         choices: [`Apache`,`Eclipse`,`GNU`,`MIT`],
 
     },

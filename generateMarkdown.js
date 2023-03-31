@@ -56,7 +56,7 @@ function generateReadme(answers){
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Contribution](#contribution)
+  - [Credits](#credits)
   - [License](#license)
 
     
@@ -69,8 +69,12 @@ function generateReadme(answers){
   ## Usage
   ${answers.usage}
 
-  ## Contribution
-  ${answers.contribution}
+  ## Questions
+  ${answers.questions}
+  ${answers.questionsTwo}
+
+  ## Credits
+  ${answers.credits}
 
   ## License
   ${answers.license}
