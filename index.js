@@ -62,11 +62,12 @@ inquirer
 
   ])
 
-
+// 
 .then((answers) => {
  const readMe = generateReadme (answers)
     // // Write the answers to the README.md
     fs.writeFile('README.md', readMe, (err) =>{
+        // gives error message if applicable otherwise give message that it worked
     if (err) {
     
         console.log ("There's been an error");
@@ -82,11 +83,6 @@ inquirer
 });
 
 
-
-
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
+// Initializes app
+init();
 

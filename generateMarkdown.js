@@ -1,7 +1,6 @@
-// // TODO: Create a function that returns a license badge based on which license is passed in
-// // If there is no license, return an empty string
+// // Renders the license badge when user makes a choice or defaults to empty string
 function renderLicenseBadge(license) {
- switch(choices) {
+ switch(answers) {
     case'Apache':
         return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]";
 
@@ -19,10 +18,9 @@ function renderLicenseBadge(license) {
 
 }
 
-// // TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
+// // A function that renders the license link when user makes a choice or defaults to an empty string
 function renderLicenseLink(license) {
-    switch(choices) {
+    switch(answers) {
        case'Apache':
            return "[![License: Apache](https://opensource.org/licenses/Apache-2.0)]";
    
@@ -39,11 +37,8 @@ function renderLicenseLink(license) {
     }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-// function renderLicenseSection(license) {}
 
-// TODO: Create a function to generate markdown for README
+// Generates Markdown for the README.md
 function generateReadme(answers){
   return `
 
