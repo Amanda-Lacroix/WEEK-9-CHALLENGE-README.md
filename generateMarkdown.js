@@ -50,7 +50,7 @@ function generateReadme(answers){
 
   # ${answers.title}
 
-  ${licenseBadge}
+  ![License Badge](${licenseBadge})
 
   ## Table of Contents
 
@@ -78,8 +78,9 @@ function generateReadme(answers){
   ${answers.credits}
 
   ## License
-  ${answers.license}
-  ${licenseLink}
+  [${answers.license}]( ${licenseLink})
+  
+ 
 
 `;
 
