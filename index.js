@@ -62,7 +62,7 @@ inquirer
 
   ])
 
-// 
+
 .then((answers) => {
  const readMe = generateReadme (answers)
     // // Write the answers to the README.md
@@ -78,11 +78,7 @@ inquirer
   
   });
 
-
-
 });
 
 
-// Initializes app
-init();
 

@@ -1,11 +1,11 @@
 // // Renders the license badge when user makes a choice or defaults to empty string
 function renderLicenseBadge(license) {
- switch(answers) {
+ switch(license) {
     case'Apache':
-        return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]";
+        return "[![License Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]";
 
     case 'Eclipse':
-        return "[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)]";
+        return "[![License Eclipse](https://img.shields.io/badge/License-EPL%201.0-red.svg)]";
 
     case 'GNU':
         return "[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)]";
@@ -13,14 +13,15 @@ function renderLicenseBadge(license) {
     case 'MIT':
         return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]";
 
-    default: ''
+    default:
+      return '';
  }
 
 }
 
 // // A function that renders the license link when user makes a choice or defaults to an empty string
 function renderLicenseLink(license) {
-    switch(answers) {
+    switch(license) {
        case'Apache':
            return "[![License: Apache](https://opensource.org/licenses/Apache-2.0)]";
    
@@ -33,18 +34,23 @@ function renderLicenseLink(license) {
        case 'MIT':
            return "[![License: MIT](https://opensource.org/licenses/MIT)]";
    
-       default: ''
+        default:
+          return '';
     }
 }
 
 
 // Generates Markdown for the README.md
 function generateReadme(answers){
+    const licenseBadge = renderLicenseBadge(answers.license);
+    const licenseLink = renderLicenseLink(answers.license)
+
+
   return `
 
   # ${answers.title}
 
-  ${renderLicenseBadge.answers}
+  ${licenseBadge}
 
   ## Table of Contents
 
@@ -73,7 +79,7 @@ function generateReadme(answers){
 
   ## License
   ${answers.license}
-  ${renderLicenseLink.answers}
+  ${licenseLink}
 
 `;
 
