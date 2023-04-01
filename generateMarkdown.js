@@ -2,16 +2,16 @@
 function renderLicenseBadge(license) {
  switch(license) {
     case'Apache':
-        return "[![License Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]";
+        return 'https://img.shields.io/badge/License-Apache%202.0-blue.svg';
 
     case 'Eclipse':
-        return "[![License Eclipse](https://img.shields.io/badge/License-EPL%201.0-red.svg)]";
+        return "https://img.shields.io/badge/License-EPL%201.0-red.svg";
 
     case 'GNU':
-        return "[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)]";
+        return "https://img.shields.io/badge/License-GPL%20v3-blue.svg";
 
     case 'MIT':
-        return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]";
+        return "https://img.shields.io/badge/License-MIT-yellow.svg";
 
     default:
       return '';
@@ -23,16 +23,16 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
     switch(license) {
        case'Apache':
-           return "[![License: Apache](https://opensource.org/licenses/Apache-2.0)]";
+           return 'https://opensource.org/licenses/Apache-2.0';
    
        case 'Eclipse':
-           return "[![License: Eclipse](https://opensource.org/licenses/EPL-1.0)]";
+           return "https://opensource.org/licenses/EPL-1.0";
    
        case 'GNU':
-           return "[![License: GPL v3](http://www.gnu.org/licenses/gpl-3.0)]";
+           return "http://www.gnu.org/licenses/gpl-3.0";
    
        case 'MIT':
-           return "[![License: MIT](https://opensource.org/licenses/MIT)]";
+           return "https://opensource.org/licenses/MIT";
    
         default:
           return '';
